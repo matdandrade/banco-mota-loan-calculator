@@ -132,46 +132,100 @@
         </section>
 
         <!-- Block 2 result form -->
-        <section class="calculate-result"> 
-            <form> 
+        <section class="calculator-results"> 
+             
                 <fieldset>
-                        <legend>2. View simulation results</legend>
+                    <legend>2. View simulation results</legend>
                         
                         <div class="primary-results">
-                            <h3>Installment Amount</h3>
-                                <p>$1.000,00</p> <!-- Espaço para o valor da prestação -->
+                            <div class="result-card">
+                                <span>Installment Amount</span>
+                                <output class="out-installment">€1.000,00</output>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Total Amount Payable</span>
+                                <output class="out-total-amount">€60.000,00</output>
+                            </div>
                         </div>
 
-                        <div class="primary-results">
-                            <h3>Total Amount Payable</h3>
-                            <p>$60.000,00</p> <!-- Espaço para o valor total a ser pago -->
+                        <div class="secondary-results">
+                            <div class="result-card">
+                                <span>Total Interest</span>
+                                <output class="out-total-interest">€10.000,00</output> 
+                            </div>
+
+                            <div class="result-card">
+                                <span>Nominal APR</span>
+                                <output class="out-apr-nominal">18%</output>
+                            </div>
+
+                            <div class="result-card">
+                                <span>Effective APR</span>
+                                <output class="out-apr-effective">18%</output> 
+                            </div>
+
+                            <div class="result-card">
+                                <span>Estimated IOF</span>
+                                <output class="out-iof">€1.000,00</output>
+                            </div>
+                        </div>
+                
+                        <h2>Amortization Schedule (Summary)</h2>
+                        <table class="schedule-table">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Due Date</th>
+                                <th>Payment Amount</th>
+                                <th>Interest</th>
+                                <th>Principal</th>
+                                <th>Remaining Balance</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="schedule-body">
+
+
+                        </tbody>
+
+                        </table>
+
+                        <button type="button" class="btn-view-schedule">
+                            <img src="assets/icons/view-icon.png" alt="view Schedule">
+                            View full schedule
+                        </button>
+
+                        <button type="button" class="btn-download">
+                            <img src="assets/icons/download.png" alt="Download PDF">
+                            Download simulation as PDF
+                        </button>
+                
+                </fieldset>
+
+                    <div class="important-box">
+                        <div class="important-title">
+                            <img src="important-icon.png" alt="Important Icon">
+                            <strong>Important</strong>
                         </div>
 
-                        <div class="result-group">
-                            <h3>Total Interest</h3>
-                            <p>$10.000,00</p> <!-- Espaço para o valor total dos juros -->
-                        </div>
+                        <p>
+                            This simulation does not represent a credit offer.
+                            <br>
+                            Final conditions are subject analysis and renegotiation.
+                        </p>
 
-                            <label for="apr">APR (p.a)</label>
-                            <p>18%</p>  <!-- Espaço para o valor da APR -->
-                        
+                    </div>
 
-                            <label for="apr-annual">APR (a.a)</label>
-                            <p>18%</p>  <!-- Espaço para o valor da APR -->
-                        
-
-                            <label for="iof">Estimated IOF</label>
-                            <p>$1.000,00</p></fieldset> <!-- Espaço para o valor estimado do IOF -->
-                        <table><p>Amortization Schedule (Summary)</p> <!-- Espaço para o resumo da tabela de amortização -->
-                            <p>Months</p></table>
-                            <button type="button">View full schedule</button>
-                            <button type="button">Download simulation as PDF</button><br> <!-- botton to download PDF-->
-                    <img src="important-icon.png" alt="Important Icon"><p><b>Important</b></p> <!-- Ícone de importante -->
-                    <p>This simulation does not represent a credit offer.<br>
-                    Final conditions are subject analysis and renegotiation.</p>
-                    <p><b>Need help?</b></p>
-                    <button type="button" img="help-icon.png">Talk to a specialist</button> <!-- Ícone de ajuda -->
-            </form>
+                    <div class="help">
+                        <h2>Need help?</h2>
+                        <button type="button" class="btn-help">
+                           <img src="help-icon.png" alt="Help">
+                            Talk to a specialist
+                        </button>
+                    </div>
+            
         </section>
     </div>
 
