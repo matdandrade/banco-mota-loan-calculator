@@ -51,6 +51,7 @@ nav a {
     color:#6b6b6b;
 }
 
+/*Calculator*/
 .calculator-info {
     display: flex;
     align-items: center;
@@ -266,4 +267,215 @@ legend {
 
 .btn-clear:hover {
     text-decoration: underline;
+}
+
+/*Calculator Results*/
+.calculator-results {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.results-summary {
+    border: 1px solid #f2f2f2;
+    border-radius: 7px;
+}
+
+.primary-results {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.primary-results .result-card:first-child {
+    position: relative;
+}
+
+.primary-results .result-card:first-child::after {
+    content:"";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: #f2f2f2;
+}
+
+.secondary-results {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: relative;
+}
+
+.secondary-results::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    background-color: #f2f2f2;
+}
+
+.secondary-results .result-card{
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.secondary-results .result-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: #f2f2f2;
+}
+
+.result-card {
+   display: flex;
+   flex-direction: column;
+   padding: 12px 16px;
+}
+
+.result-card span {
+    font-size: 13px;
+    color: #6b6b6b;
+    margin-bottom: 5px;
+}
+
+.primary-results output {
+    font-size: 23px;
+    color:#0b1f3b;
+    font-weight: bold;
+}
+
+.secondary-results output {
+    font-size: 18px;
+    color:#0b1f3b;
+    font-weight: bold;
+}
+
+/*Schedule*/
+.table-container {
+    width: 100%;
+    border:1px solid #f2f2f2;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-title {
+    font-size:18px;
+    color:#0d1b2a;
+    margin:20px 0 12px;
+}
+
+.schedule-table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+}
+
+.schedule-header {
+    background: #f2f2f2;
+}
+
+.schedule-table th {
+    padding: 10px;
+    font-size: 12px;
+    color: #0d1b2a;
+    font-weight: 600;
+}
+
+.schedule-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #6b6b6b;
+}
+
+.schedule-table td:not(:first-child){
+    text-align: center;
+}
+
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+    text-align: center;
+}
+
+.dots-row td {
+    text-align: center!important;
+    color: #6b6b6b;
+}
+
+.selected-system {
+    color:#c9a15b;
+}
+
+.last-payment {
+    position: relative;
+    padding-top: 15px;
+}
+
+.last-payment::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background-color: #f2f2f2;
+}
+
+/*Schedule Buttons*/
+.schedule-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-view-schedule {
+    background: none;
+    border: none;
+    color: #0d1b2a;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-view-schedule img{
+    width: 25px;
+    height: auto;
+    border: none;
+    padding: 5px;
+    max-width: 30px;
+    align-items: center;
+}
+
+.btn-view-schedule:hover {
+    text-decoration: underline;
+}
+
+.btn-download {
+    background-color: #ffffff;
+    color: #0d1b2a;
+    border: 1px solid #0d1b2a;
+    padding: 8px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.btn-download img {
+    width: 25px;
+    height: auto;
+    border: none;
+    padding: 5px;
+    max-width: 30px;
+    align-items: center;
 }

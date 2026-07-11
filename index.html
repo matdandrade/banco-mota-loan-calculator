@@ -81,7 +81,8 @@
                                 <input type="radio" 
                                     id="amortization-system-price" 
                                     name="amortization-system" 
-                                    value="Price">
+                                    value="Price"
+                                    checked>
 
                                 <span class="radio-title">Price</span>
                             </div>
@@ -124,8 +125,12 @@
 
                     <!--Actions Buttons-->
                     <div class="form-actions">
-                        <button type="button" class="btn-calculate">Calculate</button>
-                        <button type="reset" class="btn-clear">Clear fields <span>↻</span></button>
+                        <button type="button" class="btn-calculate">
+                            Calculate
+                        </button>
+                        <button type="reset" class="btn-clear">
+                            Clear fields <span>↻</span>
+                        </button>
                     </div>
                 </fieldset>
             </form>
@@ -133,10 +138,10 @@
 
         <!-- Block 2 result form -->
         <section class="calculator-results"> 
-             
-                <fieldset>
-                    <legend>2. View simulation results</legend>
-                        
+            <fieldset>
+                 <legend>2. View simulation results</legend>
+                    <div class="results-summary">
+
                         <div class="primary-results">
                             <div class="result-card">
                                 <span>Installment Amount</span>
@@ -170,28 +175,80 @@
                                 <output class="out-iof">€1.000,00</output>
                             </div>
                         </div>
-                
-                        <h2>Amortization Schedule (Summary)</h2>
+                    </div>
+
+                        <h2 class="schedule-title">
+                            Amortization Schedule (<span class="selected-system">Price</span>)
+                        </h2>
+
+                    <div class="table-container">   
                         <table class="schedule-table">
 
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Due Date</th>
-                                <th>Payment Amount</th>
-                                <th>Interest</th>
-                                <th>Principal</th>
-                                <th>Remaining Balance</th>
-                            </tr>
-                        </thead>
+                            <thead class="schedule-header">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Due Date</th>
+                                    <th>Installment</th>
+                                    <th>Amortization</th>
+                                    <th>Interest</th>
+                                    <th>Outstanding Balance</th>
+                                </tr>
+                            </thead>
+                        
 
-                        <tbody class="schedule-body">
+                            <tbody class="schedule-body">
 
+                                <!--first payment-->
+                                <tr>
+                                    <td class="payment-number">1</td>
+                                    <td class="due-date">Jan 2027</td>
+                                    <td class="installment">€1.000</td>
+                                    <td class="amortization">€800</td>
+                                    <td class="interest">€200</td>
+                                    <td class="balance">€59.200</td>
+                                </tr>
 
-                        </tbody>
+                                <!--second payment-->
+                                <tr>
+                                    <td class="payment-number">2</td>
+                                    <td class="due-date">Feb 2027</td>
+                                    <td class="installment">€1.000</td>
+                                    <td class="amortization">€820</td>
+                                    <td class="interest">€180</td>
+                                    <td class="balance">€58.380</td>
+                                </tr>
+
+                                <!--third payment-->
+                                <tr>
+                                    <td class="payment-number">3</td>
+                                    <td class="due-date">Mar 2027</td>
+                                    <td class="installment">€1.000</td>
+                                    <td class="amortization">€840</td>
+                                    <td class="interest">€160</td>
+                                    <td class="balance">€57.380</td>
+                                </tr>
+
+                                <!--...-->
+                                <tr class="dots-row">
+                                    <td colspan="6">...</td>
+                                </tr>
+
+                                <!--Last payment-->
+                                <tr class="last-payment">
+                                    <td class="payment-number">48</td>
+                                    <td class="due-date">Dec 2030</td>
+                                    <td class="installment">€1.000</td>
+                                    <td class="amortization">€980</td>
+                                    <td class="interest">€20</td>
+                                    <td class="balance">€0</td>
+                                </tr>
+
+                            </tbody>
 
                         </table>
-
+                    </div> 
+                    
+                    <div class="schedule-actions">
                         <button type="button" class="btn-view-schedule">
                             <img src="assets/icons/view-icon.png" alt="view Schedule">
                             View full schedule
@@ -201,10 +258,13 @@
                             <img src="assets/icons/download.png" alt="Download PDF">
                             Download simulation as PDF
                         </button>
-                
-                </fieldset>
+                    </div>
 
-                    <div class="important-box">
+            </fieldset>
+        </section>
+    </div>
+
+        <div class="important-box">
                         <div class="important-title">
                             <img src="important-icon.png" alt="Important Icon">
                             <strong>Important</strong>
@@ -225,10 +285,7 @@
                             Talk to a specialist
                         </button>
                     </div>
-            
-        </section>
-    </div>
-
+        </div>
     <footer>
         <p>For over 30 yers building relationships of trust and driving stories forward.</p>
         <!--Social Media Icons-->
