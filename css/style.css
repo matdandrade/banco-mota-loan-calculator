@@ -88,13 +88,15 @@ nav a {
 .main-container-form {
     display: flex;
     gap: 30px;
-    align-items: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
 /*Two sections Form*/
-.calculator-form, .results-block {
-    flex: 1;
+.calculator-form {
+    flex: 1 1 500px;
+    min-width: 300px;
     background-color: #ffffff;
     border: 1px solid #f2f2f2;
     border-radius: 12px;
@@ -271,7 +273,8 @@ legend {
 
 /*Calculator Results*/
 .calculator-results {
-    flex: 1;
+    flex: 1 1 500px;
+    min-width: 300px;
     background: #ffffff;
     border: 1px solid #f2f2f2;
     border-radius: 12px;
@@ -414,43 +417,36 @@ legend {
     color:#c9a15b;
 }
 
-.last-payment {
-    position: relative;
+.last-payment td {
     padding-top: 15px;
-}
-
-.last-payment::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10px;
-    right: 10px;
-    height: 1px;
-    background-color: #f2f2f2;
+    padding-bottom: 15px;
+    border-top: 1px solid #f2f2f2;
 }
 
 /*Schedule Buttons*/
 .schedule-actions {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
 }
 
 .btn-view-schedule {
+    display: flex;
     background: none;
     border: none;
     color: #0d1b2a;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
 }
 
 .btn-view-schedule img{
-    width: 25px;
+    width: 20px;
     height: auto;
     border: none;
-    padding: 5px;
     max-width: 30px;
     align-items: center;
 }
@@ -460,22 +456,26 @@ legend {
 }
 
 .btn-download {
+    display: flex;
+    align-items: center;
     background-color: #ffffff;
     color: #0d1b2a;
     border: 1px solid #0d1b2a;
-    padding: 8px 25px;
-    font-size: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    align-items: center;
+    gap: 10px;
 }
 
 .btn-download img {
-    width: 25px;
+    width: 20px;
     height: auto;
     border: none;
     padding: 5px;
     max-width: 30px;
     align-items: center;
 }
+
+/*Important and Help*/
