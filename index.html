@@ -1,324 +1,390 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco Mota</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
-        <a href="#home">
-            <img src="assets/logo/logo.png" alt="Banco Mota">
-        </a>
-            <nav>
-                <a href="#personal">Personal</a>
-                <a href="#business">Business</a>
-                <a href="#investments">Investments</a>
-                <a href="#about-us">About Us</a>
-                <a href="#help">Help</a>
-            </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banco Mota</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="#home">
+                <img src="assets/logo/logo.png" alt="Banco Mota">
+            </a>
+                <nav>
+                    <a href="#personal">Personal</a>
+                    <a href="#business">Business</a>
+                    <a href="#investments">Investments</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="#help">Help</a>
+                </nav>
+        </header>
 
-    <section class="calculator-intro">
-        <div class="intro-text">
-            <h1>Loan Interest Calculator</h1>
-            <p>Simulate your loan and see the conditions that best fit your budget</p>
-        </div>
-
-        <div class="calculator-info">
-            <img src="assets/icons/calculator-icon.png" alt="calculator icon">
-            <div class="info-text-block">    
-            <p class="estimated-title"><b>Estimated results</b></p> <!-- Calculator Icon-->
-            <p class="estimated-desc">The conditions shown are simulations<br> and may vary according to credit analysis.</p>
+        <section class="calculator-intro">
+            <div class="intro-text">
+                <h1>Loan Interest Calculator</h1>
+                <p>Simulate your loan and see the conditions that best fit your budget</p>
             </div>
-        </div>
-    </section>
 
-    <div class="main-container-form">
+            <div class="calculator-info">
+                <img src="assets/icons/calculator-icon.png" alt="calculator icon">
+                <div class="info-text-block">    
+                    <p class="estimated-title"><b>Estimated results</b></p> <!-- Calculator Icon-->
+                    <p class="estimated-desc">The conditions shown are simulations<br> and may vary according to credit analysis.</p>
+                </div>
+            </div>
+        </section>
 
-        <!--Block 1 Form insert informations-->
-        <section class="calculator-form"> 
-            <form>
-                <fieldset>
-                    <legend>1. Enter Your information</legend>
+        <div class="main-container-form">
 
-                    <!--Loan Amount (full line)-->
-                    <div class="input-group full-width">
-                        <label for="loan-amount">Loan Amount</label>
-                        <div class="input-wrapper">
-                            <span class="prefix">€</span>
-                            <input type="number" id="loan-amount" value="10000"> <!-- Espaço para o valor do empréstimo -->
-                        </div>
-                    </div>
-                    
-                    <!--Line with tax-->
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="interest-rate">Interest Rate (p.a)</label>
-                            <div class="input-wrapper">  
-                                <input type="number" id="interest-rate" value="1.20" step="0.1">
-                                <span class="suffix">%</span>
-                            </div>    
-                        </div>
-                    
-                        <div class="input-group">
-                            <label for="term">Term</label>
+            <!--Block 1 Form insert informations-->
+            <section class="calculator-form"> 
+                <form>
+                    <fieldset>
+                        <legend>1. Enter Your information</legend>
+
+                        <!--Loan Amount (full line)-->
+                        <div class="input-group full-width">
+                            <label for="loan-amount">Loan Amount</label>
                             <div class="input-wrapper">
-                                <input type="number" id="term" value="48">
-                                <span class="suffix-select">months</span>
+                                <span class="prefix">€</span>
+                                <input type="number" id="loan-amount" value="10000"> <!-- Espaço para o valor do empréstimo -->
                             </div>
                         </div>
-                    </div>
-
-                    <!--Secction Amortization System-->
-                    <span class="section-label">Amortization System</span>
-                    <div class="radio-group">
                         
-                        <!--Radio buttons-->
-                        <label class="radio-card">
-                            <div class="radio-header">
-                                <input type="radio" 
-                                    id="amortization-system-price" 
-                                    name="amortization-system" 
-                                    value="Price"
-                                    checked>
+                        <!--Line with tax-->
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="interest-rate">Interest Rate (p.a)</label>
+                                <div class="input-wrapper">  
+                                    <input type="number" id="interest-rate" value="1.20" step="0.1">
+                                    <span class="suffix">%</span>
+                                </div>    
+                            </div>
+                        
+                            <div class="input-group">
+                                <label for="term">Term</label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="term" value="48">
+                                    <span class="suffix-select">months</span>
+                                </div>
+                            </div>
+                        </div>
 
-                                <span class="radio-title">Price</span>
+                        <!--Secction Amortization System-->
+                        <span class="section-label">Amortization System</span>
+                        <div class="radio-group">
+                            
+                            <!--Radio buttons-->
+                            <label class="radio-card">
+                                <div class="radio-header">
+                                    <input type="radio" 
+                                        id="amortization-system-price" 
+                                        name="amortization-system" 
+                                        value="Price"
+                                        checked>
+
+                                    <span class="radio-title">Price</span>
+                                </div>
+
+                                <p class="radio-desc">
+                                    Fixed installments throughout the term.
+                                </p>
+                            </label>
+
+                            <label class="radio-card">
+                                <div class="radio-header">
+                                    <input type="radio" 
+                                        id="amortization-system-sac" 
+                                        name="amortization-system" 
+                                        value="SAC">
+
+                                    <span class="radio-title">SAC</span>
+                                </div>
+
+                                <p class="radio-desc">
+                                    Decreasing installments with constant amortization.
+                                </p>
+                            </label>
+
+                            <label class="radio-card">
+                                <div class="radio-header">
+                                    <input type="radio" 
+                                        id="amortization-system-mixed" 
+                                        name="amortization-system" 
+                                        value="Mixed"> 
+
+                                    <span class="radio-title">Mixed</span>
+                                </div>
+                                <p class="radio-desc">
+                                    Combination of Price and SAC.
+                                </p>
+                            </label>
+
+                        </div>
+
+                        <!--Actions Buttons-->
+                        <div class="form-actions">
+                            <button type="button" class="btn-calculate">
+                                Calculate
+                            </button>
+                            <button type="reset" class="btn-clear">
+                                Clear fields <span>↻</span>
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- Block 2 result form -->
+            <section class="calculator-results"> 
+                <fieldset>
+                    <legend>2. View simulation results</legend>
+                        <div class="results-summary">
+
+                            <div class="primary-results">
+                                <div class="result-card">
+                                    <span>Installment Amount</span>
+                                    <output class="out-installment">€1.000,00</output>
+                                </div>
+
+                                <div class="result-card">
+                                    <span>Total Amount Payable</span>
+                                    <output class="out-total-amount">€60.000,00</output>
+                                </div>
                             </div>
 
-                            <p class="radio-desc">
-                                Fixed installments throughout the term.
-                            </p>
-                        </label>
+                            <div class="secondary-results">
+                                <div class="result-card">
+                                    <span>Total Interest</span>
+                                    <output class="out-total-interest">€10.000,00</output> 
+                                </div>
 
-                        <label class="radio-card">
-                            <div class="radio-header">
-                                <input type="radio" 
-                                    id="amortization-system-sac" 
-                                    name="amortization-system" 
-                                    value="SAC">
+                                <div class="result-card">
+                                    <span>Nominal APR</span>
+                                    <output class="out-apr-nominal">18%</output>
+                                </div>
 
-                                <span class="radio-title">SAC</span>
+                                <div class="result-card">
+                                    <span>Effective APR</span>
+                                    <output class="out-apr-effective">18%</output> 
+                                </div>
+
+                                <div class="result-card">
+                                    <span>Estimated IOF</span>
+                                    <output class="out-iof">€1.000,00</output>
+                                </div>
                             </div>
+                        </div>
 
-                            <p class="radio-desc">
-                                Decreasing installments with constant amortization.
-                            </p>
-                        </label>
+                            <h2 class="schedule-title">
+                                Amortization Schedule (<span class="selected-system">Price</span>)
+                            </h2>
 
-                        <label class="radio-card">
-                            <div class="radio-header">
-                                <input type="radio" 
-                                    id="amortization-system-mixed" 
-                                    name="amortization-system" 
-                                    value="Mixed"> 
+                        <div class="table-container">   
+                            <table class="schedule-table">
 
-                                <span class="radio-title">Mixed</span>
-                            </div>
-                            <p class="radio-desc">
-                                Combination of Price and SAC.
-                            </p>
-                        </label>
+                                <thead class="schedule-header">
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Due Date</th>
+                                        <th>Installment</th>
+                                        <th>Amortization</th>
+                                        <th>Interest</th>
+                                        <th>Outstanding Balance</th>
+                                    </tr>
+                                </thead>
+                            
 
-                    </div>
+                                <tbody class="schedule-body">
 
-                    <!--Actions Buttons-->
-                    <div class="form-actions">
-                        <button type="button" class="btn-calculate">
-                            Calculate
-                        </button>
-                        <button type="reset" class="btn-clear">
-                            Clear fields <span>↻</span>
-                        </button>
-                    </div>
+                                    <!--first payment-->
+                                    <tr>
+                                        <td class="payment-number">1</td>
+                                        <td class="due-date">Jan 2027</td>
+                                        <td class="installment">€1.000</td>
+                                        <td class="amortization">€800</td>
+                                        <td class="interest">€200</td>
+                                        <td class="balance">€59.200</td>
+                                    </tr>
+
+                                    <!--second payment-->
+                                    <tr>
+                                        <td class="payment-number">2</td>
+                                        <td class="due-date">Feb 2027</td>
+                                        <td class="installment">€1.000</td>
+                                        <td class="amortization">€820</td>
+                                        <td class="interest">€180</td>
+                                        <td class="balance">€58.380</td>
+                                    </tr>
+
+                                    <!--third payment-->
+                                    <tr>
+                                        <td class="payment-number">3</td>
+                                        <td class="due-date">Mar 2027</td>
+                                        <td class="installment">€1.000</td>
+                                        <td class="amortization">€840</td>
+                                        <td class="interest">€160</td>
+                                        <td class="balance">€57.380</td>
+                                    </tr>
+
+                                    <!--...-->
+                                    <tr class="dots-row">
+                                        <td colspan="6">...</td>
+                                    </tr>
+
+                                    <!--Last payment-->
+                                    <tr class="last-payment">
+                                        <td class="payment-number">48</td>
+                                        <td class="due-date">Dec 2030</td>
+                                        <td class="installment">€1.000</td>
+                                        <td class="amortization">€980</td>
+                                        <td class="interest">€20</td>
+                                        <td class="balance">€0</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div> 
+                        
+                        <div class="schedule-actions">
+                            <button type="button" class="btn-view-schedule">
+                                <img src="assets/icons/view-icon.png" alt="view Schedule">
+                                View full schedule
+                            </button>
+
+                            <button type="button" class="btn-download">
+                                <img src="assets/icons/download.png" alt="Download PDF">
+                                Download simulation as PDF
+                            </button>
+                        </div>
+
                 </fieldset>
-            </form>
-        </section>
-
-        <!-- Block 2 result form -->
-        <section class="calculator-results"> 
-            <fieldset>
-                 <legend>2. View simulation results</legend>
-                    <div class="results-summary">
-
-                        <div class="primary-results">
-                            <div class="result-card">
-                                <span>Installment Amount</span>
-                                <output class="out-installment">€1.000,00</output>
-                            </div>
-
-                            <div class="result-card">
-                                <span>Total Amount Payable</span>
-                                <output class="out-total-amount">€60.000,00</output>
-                            </div>
-                        </div>
-
-                        <div class="secondary-results">
-                            <div class="result-card">
-                                <span>Total Interest</span>
-                                <output class="out-total-interest">€10.000,00</output> 
-                            </div>
-
-                            <div class="result-card">
-                                <span>Nominal APR</span>
-                                <output class="out-apr-nominal">18%</output>
-                            </div>
-
-                            <div class="result-card">
-                                <span>Effective APR</span>
-                                <output class="out-apr-effective">18%</output> 
-                            </div>
-
-                            <div class="result-card">
-                                <span>Estimated IOF</span>
-                                <output class="out-iof">€1.000,00</output>
-                            </div>
-                        </div>
-                    </div>
-
-                        <h2 class="schedule-title">
-                            Amortization Schedule (<span class="selected-system">Price</span>)
-                        </h2>
-
-                    <div class="table-container">   
-                        <table class="schedule-table">
-
-                            <thead class="schedule-header">
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Due Date</th>
-                                    <th>Installment</th>
-                                    <th>Amortization</th>
-                                    <th>Interest</th>
-                                    <th>Outstanding Balance</th>
-                                </tr>
-                            </thead>
-                        
-
-                            <tbody class="schedule-body">
-
-                                <!--first payment-->
-                                <tr>
-                                    <td class="payment-number">1</td>
-                                    <td class="due-date">Jan 2027</td>
-                                    <td class="installment">€1.000</td>
-                                    <td class="amortization">€800</td>
-                                    <td class="interest">€200</td>
-                                    <td class="balance">€59.200</td>
-                                </tr>
-
-                                <!--second payment-->
-                                <tr>
-                                    <td class="payment-number">2</td>
-                                    <td class="due-date">Feb 2027</td>
-                                    <td class="installment">€1.000</td>
-                                    <td class="amortization">€820</td>
-                                    <td class="interest">€180</td>
-                                    <td class="balance">€58.380</td>
-                                </tr>
-
-                                <!--third payment-->
-                                <tr>
-                                    <td class="payment-number">3</td>
-                                    <td class="due-date">Mar 2027</td>
-                                    <td class="installment">€1.000</td>
-                                    <td class="amortization">€840</td>
-                                    <td class="interest">€160</td>
-                                    <td class="balance">€57.380</td>
-                                </tr>
-
-                                <!--...-->
-                                <tr class="dots-row">
-                                    <td colspan="6">...</td>
-                                </tr>
-
-                                <!--Last payment-->
-                                <tr class="last-payment">
-                                    <td class="payment-number">48</td>
-                                    <td class="due-date">Dec 2030</td>
-                                    <td class="installment">€1.000</td>
-                                    <td class="amortization">€980</td>
-                                    <td class="interest">€20</td>
-                                    <td class="balance">€0</td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-                    </div> 
-                    
-                    <div class="schedule-actions">
-                        <button type="button" class="btn-view-schedule">
-                            <img src="assets/icons/view-icon.png" alt="view Schedule">
-                            View full schedule
-                        </button>
-
-                        <button type="button" class="btn-download">
-                            <img src="assets/icons/download.png" alt="Download PDF">
-                            Download simulation as PDF
-                        </button>
-                    </div>
-
-            </fieldset>
-        </section>
-    </div>
-
-        <div class="important-box">
-                        <div class="important-title">
-                            <img src="assets/icons/important-icon.png" alt="Important Icon">
-                            <strong>Important</strong>
-                        </div>
-
-                        <p>
-                            This simulation does not represent a credit offer.
-                            <br>
-                            Final conditions are subject analysis and renegotiation.
-                        </p>
-
-                    </div>
-
-                    <div class="help">
-                        <h2>Need help?</h2>
-                        <button type="button" class="btn-help">
-                           <img src="assets/icons/help-icon.png" alt="Help">
-                            Talk to a specialist
-                        </button>
-                    </div>
+            </section>
         </div>
-    <footer>
-        <p>For over 30 yers building relationships of trust and driving stories forward.</p>
-        <!--Social Media Icons-->
-        <p><b>Personal</b></p>
-            <a href="#">Digital Account</a><br>
-            <a href="#">Credit Cards</a><br>
-            <a href="#">Loans</a><br>
-            <a href="#">Investments</a><br>
-            <a href="#">Insurance</a>
-        <p><b>Business</b></p>
-            <a href="#">Business Account</a><br>
-            <a href="#">Corporate Credit</a><br>
-            <a href="#">Collection</a><br>
-            <a href="#">Payroll Services</a><br>
-            <a href="#">Corporate Solutions</a>
-        <p><b>About us</b></p>
-            <a href="#">Who we are</a><br>
-            <a href="#">Our history</a><br>
-            <a href="#">Governance</a><br>
-            <a href="#">Sustentability</a><br>
-            <a href="#">Careers</a>
-        <p><b>Help</b></p>
-            <a href="#">Help Center</a><br>
-            <a href="#">Security</a><br>
-            <a href="#">Fees</a><br>
-            <a href="#">Service Channels</a><br>
-            <a href="#">Ombudsman</a>
-        <p><b>Contact Us</b></p>
-            <img src="phone-icon.png" alt="Phone Icon"> <p>4000 1234 (Capital and Metropolitan Region)</p> <!--Phone Icon-->
-            <img src="phone-icon.png" alt="Phone Icon"> <p>0800 123 4567 (Other Regions)</p>
-            <img src="email-icon.png" alt="Email Icon"> <p>contato@bancomota.com.br</p> <!--Email Icon-->
-            <img src="map-icon.png" alt="Map Icon"> <p>Branches and ATMs</p> <!--Map Icon-->
-        <p>&copy; 2026 Banco Mota. All rights reserved.</p>
-    </footer>
-</body>
+
+        <section class="important-help">
+            <div class="important-box">
+                <img src="assets/icons/important-icon.png" alt="Important Icon">
+                <div class="important-text">
+                    <h2 class="important-title">Important</h2>
+                        
+                    <p class="important-p">
+                        This simulation does not represent a credit offer.
+                        <br>
+                        Final conditions are subject analysis and renegotiation.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="help">
+                <h2 class="help-title">Need help?</h2>
+                <p class="help-description">Talk to our specialists and find the best solutions for you.</p>
+            </div>
+
+            <div class="help-button">
+                <button type="button" class="btn-help">
+                    <img src="assets/icons/help-icon.png" alt="Help">
+                    Talk to a specialist
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <section class="footer-top">
+                <div class="social">
+                    <img src="assets/logo/logo_footer.png" alt="logo_footer">
+                    <p>For over 30 yers building relationships of trust and driving stories forward.</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/">
+                        <img src="assets/icons/facebook.png" alt="Facebook">
+                        </a>
+                        
+                        <a href="https://www.instagram.com/">
+                            <img src="assets/icons/instagram.png" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.linkedin.com/">
+                            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+                        </a>
+
+                        <a href="https://www.youtube.com/">
+                            <img src="assets/icons/youtube.png" alt="Youtube">
+                        </a>
+                    </div>
+               
+                </div>
+
+                <div class="navigation">
+                    <h3>Personal</h3>
+                        <a href="#">Digital Account</a>
+                        <a href="#">Credit Cards</a>
+                        <a href="#">Loans</a>
+                        <a href="#">Investments</a>
+                        <a href="#">Insurance</a>
+                </div>
+
+                <div class="navigation">
+                    <h3>Business</h3>
+                        <a href="#">Business Account</a>
+                        <a href="#">Corporate Credit</a>
+                        <a href="#">Collection</a>
+                        <a href="#">Payroll Services</a>
+                        <a href="#">Corporate Solutions</a>
+                </div>
+
+                <div class="navigation">
+                    <h3>About us</h3>
+                        <a href="#">Who we are</a>
+                        <a href="#">Our history</a>
+                        <a href="#">Governance</a>
+                        <a href="#">Sustentability</a>
+                        <a href="#">Careers</a>
+                </div>
+
+                <div class="navigation">
+                    <h3>Help</h3>
+                        <a href="#">Help Center</a>
+                        <a href="#">Security</a>
+                        <a href="#">Fees</a>
+                        <a href="#">Service Channels</a>
+                        <a href="#">Ombudsman</a>
+                </div>
+
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+
+                    <div class="contact-item">
+                        <img src="assets/icons/phone-icon.png" alt="Phone Icon">
+                        <p>4000 1234 (Capital and Metropolitan Region)</p><!--Phone Icon-->
+                    </div>    
+
+                    <div class="contact-item">
+                        <img src="assets/icons/phone-icon.png" alt="Phone Icon"> 
+                        <p>0800 123 4567 (Other Regions)</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <img src="assets/icons/email-icon.png" alt="Email Icon"> 
+                        <p>contato@bancomota.com.br</p> <!--Email Icon-->
+                    </div>    
+                    
+                    <div class="contact-item">
+                        <img src="assets/icons/map-icon.png" alt="Map Icon"> 
+                        <p>Branches and ATMs</p><!--Map Icon-->
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Banco Mota. All rights reserved.</p>
+            </div>
+
+        </footer>
+    </body>
 </html>
